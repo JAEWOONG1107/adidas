@@ -1,0 +1,123 @@
+/* wrap */
+#wrap {
+    width : 100%;
+    overflow : hidden;
+    font-family: "Pretendard";
+}
+
+/* hedaer */
+#header {
+    width : 100%;
+    height : 80px;
+    background : #fff;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    position : fixed;
+    z-index : 100;
+}
+#header .leftMenu {
+    display : flex;
+    align-items: center;
+    height : 80px;
+    margin-left : 30px;
+}
+#header .leftMenu > a {
+    width : 80px;
+    height : 80px;
+}
+#header .leftMenu img {
+    height : 80px;
+}
+#header .mainMenu {
+    width : 450px;
+    margin-left : 30px;
+    display : flex;
+    justify-content: space-between;
+}
+#header .mainMenu li {
+    width : 90px;
+    padding : 5px;
+    text-align : center;
+    font-size : 14px;
+}
+#header .mainMenu a {
+    color : #000;
+    text-align : center;
+    transition : .5s;
+}
+#header .mainMenu li:hover a {
+    transform : scale(1.15);
+    font-weight: bold;
+}
+#header .gnb {
+    margin-right : 30px;
+    display : flex;
+}
+#header .gnb .search {
+    border-radius : 25px;
+    padding : 0 20px;
+    border : 1px solid #ccc;
+    background : #fff;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    width : 200px;
+}
+#header .gnb .search i {
+    cursor : pointer;
+}
+#header .gnb input[type="text"] {
+    outline : none;
+    padding : 10px 0;
+    width : 120px;
+    border : none;
+}
+#header .gnb ul {
+    margin-left : 5px;
+    display : flex;
+    align-items: center;
+}
+#header .gnb ul li {
+    padding : 5px;
+    margin-left : 15px;
+}
+#header .gnb ul li a {
+    font-size : 24px;
+}
+.barMenu {
+    display : none;
+}
+.barMenu i {
+    cursor : pointer;
+    margin-left : 20px;
+    font-size : 24px;
+}
+@media screen and (max-width : 1024px) {
+    #header .gnb ul {
+        display : none;
+    }
+}
+@media screen and (max-width : 800px) {
+    #header .leftMenu img {
+        height : 70px;
+        margin-top : 5px;
+    }
+    #header .mainMenu {
+        display : none;
+    }
+    #header .gnb input[type="text"] {
+        width : 80px;
+    }
+    #header .gnb {
+        width : calc(50% - 30px);
+
+    }
+    #header .gnb .search {
+        display : none;
+    }
+    .barMenu {
+        width : calc(50% - 30px);
+        display : block;
+    }
+}
